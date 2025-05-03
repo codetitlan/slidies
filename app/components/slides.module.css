@@ -1,0 +1,345 @@
+/* Base slide styles */
+.slide {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  width: 800px;
+  height: 600px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.85rem; /* Base font size reduction */
+}
+
+.title {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  color: #2d3748;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #4a5568;
+  text-align: center;
+}
+
+.smallHeading {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #4a5568;
+}
+
+/* Compact section for slides with more content */
+.compactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.compactList {
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.compactList li {
+  margin: 4px 0;
+  padding: 4px 8px;
+  background-color: rgba(79, 209, 197, 0.1);
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* Quote styles */
+.quote {
+  padding: 10px;
+  background-color: rgba(79, 209, 197, 0.1);
+  border-left: 4px solid #4fd1c5;
+  margin: 8px 0;
+  font-style: italic;
+}
+
+.quote blockquote {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Key terms styles */
+.keyTerms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.keyTerms span {
+  background-color: #4fd1c5;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Highlight styles */
+.highlight {
+  background-color: #feebc8;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 8px 0;
+}
+
+.statistic {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d53f8c;
+  display: block;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.highlight .statistic {
+  display: inline;
+  margin-left: 8px;
+  font-size: 1.5rem;
+}
+
+/* List styles */
+.list ul, 
+.staggered,
+.actionList {
+  list-style-type: none;
+  padding: 0;
+  margin: 8px 0;
+}
+
+.list ul li, 
+.staggered li {
+  margin: 6px 0;
+  padding: 6px 10px;
+  background-color: rgba(79, 209, 197, 0.1);
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+
+/* Monologue styles */
+.monologue {
+  background-color: rgba(45, 55, 72, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.monologue p {
+  font-style: italic;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Image styles */
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
+  max-height: 150px; /* Reduced height */
+}
+
+.infoGraphic, .chart {
+  max-width: 90%;
+  max-height: 150px;
+  border-radius: 8px;
+}
+
+.imageComparison {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+  max-height: 120px; /* Reduced height */
+}
+
+.contrastImage {
+  max-width: 48%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 120px;
+}
+
+/* Value grid styles */
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.valueItem {
+  background-color: #5a67d8;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* Action list styles */
+.actionList li {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  padding: 4px 8px;
+  background-color: rgba(90, 103, 216, 0.1);
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.actionIcon {
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+/* Animation classes */
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.flyIn {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: flyIn 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.zoomIn {
+  transform: scale(0.8);
+  opacity: 0;
+  animation: zoomIn 0.8s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+.staggered li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.staggered li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.staggered li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.staggered li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.staggered li:nth-child(5) {
+  animation-delay: 1.0s;
+}
+
+.flyInStaggered {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: flyIn 0.8s ease-out forwards;
+}
+
+.flyInStaggered:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.flyInStaggered:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.flyInStaggered:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.flyInStaggered:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flyIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Present state animations */
+.present .fadeIn {
+  animation-play-state: running;
+}
+
+.present .flyIn {
+  animation-play-state: running;
+}
+
+.present .zoomIn {
+  animation-play-state: running;
+}
+
+.present .staggered li {
+  animation-play-state: running;
+}
+
+.present .flyInStaggered {
+  animation-play-state: running;
+}
+
+/* Past state */
+.past .fadeIn,
+.past .flyIn,
+.past .zoomIn,
+.past .staggered li,
+.past .flyInStaggered {
+  opacity: 1;
+  transform: none;
+}
+
+/* Future state */
+.future .fadeIn,
+.future .flyIn,
+.future .zoomIn,
+.future .staggered li,
+.future .flyInStaggered {
+  opacity: 0;
+} 

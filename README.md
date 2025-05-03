@@ -1,24 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI, Codetitlan, and Our Future - Interactive Presentation
+
+This is an interactive presentation built with Next.js, React, and impress.js (via react-impressjs) that explores the impact of AI on Latin America, with a focus on the Querétaro & Bajío region.
+
+## Features
+
+- 3D presentation with smooth transitions between slides
+- Responsive design
+- Animated content elements
+- Created with react-impressjs
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the presentation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Image Replacement Instructions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The presentation currently uses placeholder images that need to be replaced with actual assets:
+
+1. **Querétaro's AI Applications Infographic** (`/public/placeholder-infographic.png`):
+
+   - Required on Slide 4: "AI in My Region – Querétaro & Bajío Realities"
+   - Should visualize AI applications in the region including air quality prediction, agriculture, and health services
+
+2. **Data Center Image** (`/public/placeholder-datacenter.png`):
+
+   - Required on Slide 5: "The Dark Side of AI Infrastructure"
+   - Should show a modern data center with servers and cooling systems
+
+3. **Dry Landscape Image** (`/public/placeholder-dryland.png`):
+
+   - Required on Slide 5: "The Dark Side of AI Infrastructure"
+   - Should depict water scarcity in the Querétaro region (dry, cracked land)
+
+4. **Automation Risk Chart** (`/public/placeholder-chart.png`):
+   - Required on Slide 6: "Navigating Labor Market Disruption"
+   - Should be a pie or bar chart showing sectors at risk of automation in Mexico
+
+## Navigation
+
+Use arrow keys, spacebar, or swipe gestures to navigate through the presentation. Press 'Home' to return to the first slide. Press 'End' to see an overview of all slides.
+
+## Credits
+
+Content based on "AI, Codetitlan, and Our Future" presentation outline.
 
 ## Learn More
 
