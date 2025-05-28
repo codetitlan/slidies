@@ -4,8 +4,8 @@ const SlideSix = () => {
   return (
     <div
       style={{
-        width: "900px",
-        height: "700px",
+        width: "1200px",
+        height: "850px",
         position: "relative",
         background: "transparent",
         overflow: "visible",
@@ -46,8 +46,8 @@ const SlideSix = () => {
       <div
         style={{
           position: "absolute",
-          top: "30px",
-          left: "30px",
+          top: "40px",
+          left: "50px",
           zIndex: 10,
         }}
       >
@@ -71,7 +71,7 @@ const SlideSix = () => {
               zIndex: 2,
             }}
           >
-            Navigating
+            Navegando
           </span>
           <span
             style={{
@@ -84,7 +84,7 @@ const SlideSix = () => {
               letterSpacing: "1px",
             }}
           >
-            Labor Market
+            El Mercado Laboral
           </span>
           <span
             style={{
@@ -97,7 +97,7 @@ const SlideSix = () => {
               color: "transparent",
             }}
           >
-            Disruption
+            En Disrupción
           </span>
         </h1>
       </div>
@@ -107,7 +107,7 @@ const SlideSix = () => {
         style={{
           position: "absolute",
           top: "170px",
-          right: "70px",
+          right: "120px",
           zIndex: 5,
           perspective: "800px",
         }}
@@ -156,7 +156,7 @@ const SlideSix = () => {
                 lineHeight: 1.4,
               }}
             >
-              of jobs at potential risk of automation in Mexico
+              de empleos en riesgo potencial de automatización en México
             </p>
           </div>
         </div>
@@ -166,16 +166,16 @@ const SlideSix = () => {
       <div
         style={{
           position: "absolute",
-          top: "170px",
-          left: "40px",
-          width: "340px",
-          height: "340px",
-          background: "rgba(15, 23, 42, 0.7)",
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
+          top: "190px",
+          left: "80px",
+          width: "400px",
+          height: "400px",
+          background: "rgba(250, 250, 246, 0.9)",
+          backdropFilter: "blur(5px)",
+          WebkitBackdropFilter: "blur(5px)",
           borderRadius: "20px",
-          border: "1px solid rgba(255, 255, 255, 0.1)",
-          boxShadow: "0 15px 30px rgba(0, 0, 0, 0.25)",
+          border: "1px solid rgba(244, 63, 94, 0.2)",
+          boxShadow: "0 15px 30px rgba(0, 0, 0, 0.15)",
           zIndex: 4,
           overflow: "hidden",
         }}
@@ -184,7 +184,8 @@ const SlideSix = () => {
           style={{
             width: "100%",
             padding: "15px 20px",
-            borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+            borderBottom: "1px solid rgba(244, 63, 94, 0.2)",
+            background: "rgba(30, 41, 59, 0.85)",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -197,7 +198,7 @@ const SlideSix = () => {
               color: "#e2e8f0",
             }}
           >
-            Sectors at risk in Mexico
+            Sectores en riesgo en México
           </span>
           <div
             style={{
@@ -225,63 +226,32 @@ const SlideSix = () => {
             alignItems: "center",
             flexDirection: "column",
             height: "calc(100% - 51px)",
-            padding: "20px",
+            padding: "10px",
+            background: "rgba(250, 250, 246, 0.95)",
           }}
         >
           <div
             style={{
-              width: "180px",
-              height: "180px",
+              width: "360px",
+              height: "360px",
               position: "relative",
-              margin: "10px 0 25px",
+              margin: "5px 0",
             }}
           >
-            {/* Pie chart placeholder - will be replaced with your image */}
-            <div
+            {/* Replaced pie chart placeholder with actual image */}
+            <img
+              src="/Slide6_chart.png"
+              alt="Sectores en riesgo en México"
               style={{
                 position: "absolute",
                 top: 0,
                 left: 0,
                 width: "100%",
                 height: "100%",
-                borderRadius: "50%",
-                background:
-                  "conic-gradient(#ef4444 0% 35%, #f97316 35% 55%, #f59e0b 55% 75%, #f43f5e 75% 100%)",
-                boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",
+                objectFit: "contain",
+                borderRadius: "4px",
               }}
-            ></div>
-            <div
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                width: "70px",
-                height: "70px",
-                borderRadius: "50%",
-                background: "rgba(15, 23, 42, 0.9)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "12px",
-                color: "#e2e8f0",
-                textAlign: "center",
-                fontWeight: "500",
-              }}
-            >
-              Automation
-              <br />
-              Risk
-            </div>
-          </div>
-          <div
-            style={{
-              fontSize: "14px",
-              color: "#94a3b8",
-              textAlign: "center",
-            }}
-          >
-            Chart placeholder (will be replaced)
+            />
           </div>
         </div>
       </div>
@@ -290,8 +260,8 @@ const SlideSix = () => {
       <div
         style={{
           position: "absolute",
-          bottom: "130px",
-          right: "50px",
+          bottom: "180px",
+          right: "80px",
           zIndex: 5,
         }}
       >
@@ -304,7 +274,7 @@ const SlideSix = () => {
             textShadow: "0 2px 4px rgba(0,0,0,0.2)",
           }}
         >
-          Strategic responses needed:
+          Respuestas estratégicas necesarias:
         </h3>
 
         <div
@@ -314,9 +284,13 @@ const SlideSix = () => {
           }}
         >
           {[
-            { text: "New skills training", icon: "🔄", color: "#f97316" },
-            { text: "Digital literacy", icon: "💻", color: "#f59e0b" },
-            { text: "Job transitions", icon: "🚀", color: "#ef4444" },
+            {
+              text: "Formación en nuevas habilidades",
+              icon: "🔄",
+              color: "#f97316",
+            },
+            { text: "Alfabetización digital", icon: "💻", color: "#f59e0b" },
+            { text: "Transiciones laborales", icon: "🚀", color: "#ef4444" },
           ].map((item, index) => (
             <div
               key={index}
@@ -363,8 +337,8 @@ const SlideSix = () => {
       <div
         style={{
           position: "absolute",
-          bottom: "40px",
-          left: "40px",
+          bottom: "60px",
+          left: "80px",
           maxWidth: "500px",
           background: "rgba(15, 23, 42, 0.75)",
           backdropFilter: "blur(8px)",
@@ -385,16 +359,27 @@ const SlideSix = () => {
             fontStyle: "italic",
           }}
         >
-          "Automation will reshape the Bajío labor market
+          "La automatización remodelará el mercado laboral del Bajío
           <span style={{ color: "#ef4444", fontWeight: "500" }}>
             {" "}
-            significantly
+            significativamente
           </span>
-          . But rather than a doomsday scenario, this is an invitation to
-          <span style={{ color: "#f97316", fontWeight: "500" }}> prepare</span>,
-          <span style={{ color: "#f59e0b", fontWeight: "500" }}> adapt</span>,
-          and
-          <span style={{ color: "#f43f5e", fontWeight: "500" }}> evolve</span>."
+          . Pero más que un escenario catastrófico, es una invitación a
+          <span style={{ color: "#f97316", fontWeight: "500" }}>
+            {" "}
+            prepararse
+          </span>
+          ,
+          <span style={{ color: "#f59e0b", fontWeight: "500" }}>
+            {" "}
+            adaptarse
+          </span>
+          , y
+          <span style={{ color: "#f43f5e", fontWeight: "500" }}>
+            {" "}
+            evolucionar
+          </span>
+          ."
         </p>
       </div>
 

@@ -44,7 +44,7 @@ const SlideSeven = () => {
             color: "#f8fafc",
           }}
         >
-          Codetitlan's
+          Codetitlan
         </h1>
         <div
           style={{
@@ -82,7 +82,7 @@ const SlideSeven = () => {
             border: "1px solid rgba(255, 255, 255, 0.1)",
           }}
         >
-          AI as Opportunity for Latin America
+          IA como Oportunidad para América Latina
         </h2>
       </div>
 
@@ -105,7 +105,7 @@ const SlideSeven = () => {
             textShadow: "0 2px 4px rgba(0,0,0,0.3)",
           }}
         >
-          Strategic Goals:
+          Objetivos Estratégicos:
         </h3>
 
         <div
@@ -117,17 +117,17 @@ const SlideSeven = () => {
         >
           {[
             {
-              text: "Foster local innovation",
+              text: "Fomentar la innovación local",
               color: "#8b5cf6",
               number: 1,
             },
             {
-              text: "Empower Latin American developers through AI",
+              text: "Empoderar a desarrolladores latinoamericanos a través de la IA",
               color: "#06b6d4",
               number: 2,
             },
             {
-              text: "Ethical tech practices addressing inequities",
+              text: "Prácticas tecnológicas éticas que aborden las desigualdades",
               color: "#10b981",
               number: 3,
             },
@@ -202,7 +202,7 @@ const SlideSeven = () => {
             textShadow: "0 2px 4px rgba(0,0,0,0.3)",
           }}
         >
-          Key Values:
+          Valores Clave:
         </h3>
 
         <div
@@ -213,10 +213,10 @@ const SlideSeven = () => {
           }}
         >
           {[
-            { text: "Fairness", color: "#8b5cf6" },
-            { text: "Equity", color: "#06b6d4" },
-            { text: "Inclusivity", color: "#10b981" },
-            { text: "Democratic Control", color: "#f43f5e" },
+            { text: "Justicia", color: "#8b5cf6" },
+            { text: "Equidad", color: "#06b6d4" },
+            { text: "Inclusividad", color: "#10b981" },
+            { text: "Control Democrático", color: "#f43f5e" },
           ].map((value, index) => (
             <div
               key={index}
@@ -297,18 +297,21 @@ const SlideSeven = () => {
             textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)",
           }}
         >
-          "At Codetitlan, we believe AI can—and must—serve
-          <span style={{ color: "#a78bfa", fontWeight: "600" }}> everyone</span>
-          . Our approach is rooted in
+          "En Codetitlan, creemos que la IA puede y debe servir a
+          <span style={{ color: "#a78bfa", fontWeight: "600" }}> todos</span>.
+          Nuestro enfoque está basado en la
           <span style={{ color: "#67e8f9", fontWeight: "600" }}>
             {" "}
-            fairness{" "}
+            justicia{" "}
           </span>
-          and
-          <span style={{ color: "#34d399", fontWeight: "600" }}> equity</span>,
-          ensuring Latin America doesn't just participate but actively
-          <span style={{ color: "#fb7185", fontWeight: "600" }}> shapes </span>
-          the AI revolution."
+          y la
+          <span style={{ color: "#34d399", fontWeight: "600" }}> equidad</span>,
+          asegurando que América Latina no solo participe sino que activamente
+          <span style={{ color: "#fb7185", fontWeight: "600" }}>
+            {" "}
+            dé forma{" "}
+          </span>
+          a la revolución de la IA."
         </p>
       </div>
 

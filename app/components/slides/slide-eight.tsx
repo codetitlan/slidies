@@ -7,12 +7,12 @@ const SlideEight = () => {
         width: "900px",
         height: "700px",
         position: "relative",
-        background: "transparent",
+        background: "rgba(2, 6, 23, 0.85)",
         overflow: "visible",
         fontFamily: "'Plus Jakarta Sans', sans-serif",
       }}
     >
-      {/* Background gradient elements */}
+      {/* Background gradient elements - enhanced with more opacity */}
       <div
         style={{
           position: "absolute",
@@ -21,7 +21,7 @@ const SlideEight = () => {
           width: "500px",
           height: "500px",
           background:
-            "radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, rgba(16, 185, 129, 0.02) 50%, rgba(0,0,0,0) 70%)",
+            "radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 50%, rgba(0,0,0,0) 70%)",
           zIndex: 1,
         }}
       ></div>
@@ -34,12 +34,12 @@ const SlideEight = () => {
           width: "400px",
           height: "400px",
           background:
-            "radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 50%, rgba(0,0,0,0) 70%)",
+            "radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 50%, rgba(0,0,0,0) 70%)",
           zIndex: 1,
         }}
       ></div>
 
-      {/* Title section */}
+      {/* Title section - enhanced with better contrast */}
       <div
         style={{
           position: "absolute",
@@ -56,9 +56,10 @@ const SlideEight = () => {
             padding: 0,
             color: "#f8fafc",
             lineHeight: 1.1,
+            textShadow: "0 2px 10px rgba(0,0,0,0.5)",
           }}
         >
-          Practical
+          Pasos
           <span
             style={{
               display: "inline-block",
@@ -73,9 +74,10 @@ const SlideEight = () => {
                 backgroundClip: "text",
                 color: "transparent",
                 fontWeight: "900",
+                textShadow: "none",
               }}
             >
-              Steps
+              Prácticos
             </span>
             <div
               style={{
@@ -86,7 +88,7 @@ const SlideEight = () => {
                 height: "6px",
                 background: "linear-gradient(to right, #10b981, #6ee7b7)",
                 borderRadius: "3px",
-                opacity: 0.6,
+                opacity: 0.8,
               }}
             ></div>
           </span>
@@ -95,15 +97,16 @@ const SlideEight = () => {
           style={{
             fontSize: "22px",
             fontWeight: "600",
-            color: "#e2e8f0",
+            color: "#f1f5f9",
             margin: "10px 0 0 0",
+            textShadow: "0 2px 4px rgba(0,0,0,0.5)",
           }}
         >
-          Getting Involved in AI in the Bajío Region
+          Cómo Involucrarse en IA en la Región del Bajío
         </h2>
       </div>
 
-      {/* 3D Path graphic - adjusted size and position */}
+      {/* Modern roadmap visualization - complete redesign with clearer elements */}
       <div
         style={{
           position: "absolute",
@@ -112,7 +115,7 @@ const SlideEight = () => {
           width: "340px",
           height: "340px",
           zIndex: 2,
-          perspective: "800px",
+          perspective: "1000px",
         }}
       >
         <div
@@ -121,82 +124,124 @@ const SlideEight = () => {
             height: "100%",
             position: "relative",
             transformStyle: "preserve-3d",
-            transform: "rotateX(60deg) rotateZ(-30deg)",
+            transform: "rotateX(20deg) rotateZ(-10deg)",
           }}
         >
-          {/* Path base */}
+          {/* Roadmap base */}
           <div
             style={{
               position: "absolute",
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              width: "280px",
+              width: "300px",
               height: "280px",
-              background:
-                "radial-gradient(circle, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.2) 70%, rgba(15, 23, 42, 0) 100%)",
-              borderRadius: "50%",
-              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)",
+              background: "rgba(15, 23, 42, 0.7)",
+              borderRadius: "16px",
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
             }}
           ></div>
 
-          {/* Path circles */}
+          {/* Clear milestone steps */}
           {[
             {
-              top: "20%",
-              left: "30%",
-              size: 40,
+              top: "15%",
+              left: "20%",
               color: "#10b981",
               delay: 0,
-              text: "Start",
+              text: "Inicio",
+              description: "Aprendizaje",
             },
-            { top: "40%", left: "60%", size: 35, color: "#0ea5e9", delay: 0.1 },
-            { top: "60%", left: "40%", size: 35, color: "#8b5cf6", delay: 0.2 },
             {
-              top: "80%",
+              top: "38%",
               left: "70%",
-              size: 50,
+              color: "#0ea5e9",
+              delay: 0.1,
+              text: "Paso 2",
+              description: "Práctica",
+            },
+            {
+              top: "62%",
+              left: "30%",
+              color: "#8b5cf6",
+              delay: 0.2,
+              text: "Paso 3",
+              description: "Colaboración",
+            },
+            {
+              top: "85%",
+              left: "80%",
               color: "#f43f5e",
               delay: 0.3,
-              text: "Success",
+              text: "Éxito",
+              description: "Contribución",
             },
-          ].map((circle, i) => (
+          ].map((step, i) => (
             <div
               key={i}
               style={{
                 position: "absolute",
-                top: circle.top,
-                left: circle.left,
-                width: `${circle.size}px`,
-                height: `${circle.size}px`,
-                borderRadius: "50%",
-                background: `radial-gradient(circle, ${circle.color}66 0%, ${circle.color}33 70%, ${circle.color}11 100%)`,
-                boxShadow: `0 0 20px ${circle.color}33, 0 10px 30px rgba(0, 0, 0, 0.2)`,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                animation: `float 3s ease-in-out ${circle.delay}s infinite alternate`,
+                top: step.top,
+                left: step.left,
+                transform: "translate(-50%, -50%)",
                 zIndex: 5,
+                animation: `float 3s ease-in-out ${step.delay}s infinite alternate`,
               }}
             >
-              {circle.text && (
-                <span
+              {/* Step number circle with improved visibility */}
+              <div
+                style={{
+                  width: "60px",
+                  height: "60px",
+                  borderRadius: "50%",
+                  background: step.color,
+                  color: "#ffffff",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "18px",
+                  fontWeight: "800",
+                  boxShadow: `0 0 20px ${step.color}88, 0 10px 30px rgba(0, 0, 0, 0.3)`,
+                  marginBottom: "10px",
+                  border: "2px solid rgba(255, 255, 255, 0.8)",
+                }}
+              >
+                {i + 1}
+              </div>
+
+              {/* Step label with better contrast */}
+              <div
+                style={{
+                  textAlign: "center",
+                  transform: "rotateX(-20deg) rotateZ(10deg)",
+                }}
+              >
+                <div
                   style={{
-                    color: "#f8fafc",
-                    fontSize: "14px",
+                    color: "#ffffff",
+                    fontSize: "16px",
                     fontWeight: "700",
-                    transform:
-                      "translateY(-5px) rotateX(-60deg) rotateZ(30deg)",
-                    textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)",
+                    textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
                   }}
                 >
-                  {circle.text}
-                </span>
-              )}
+                  {step.text}
+                </div>
+                <div
+                  style={{
+                    color: step.color,
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
+                  }}
+                >
+                  {step.description}
+                </div>
+              </div>
             </div>
           ))}
 
-          {/* Connecting lines */}
+          {/* Connecting path with higher contrast */}
           <svg
             width="100%"
             height="100%"
@@ -207,41 +252,29 @@ const SlideEight = () => {
               zIndex: 3,
             }}
           >
-            <line
-              x1="30%"
-              y1="20%"
-              x2="60%"
-              y2="40%"
-              stroke="#10b981"
-              strokeWidth="2"
-              strokeDasharray="5,3"
-              opacity="0.6"
+            <path
+              d="M70,60 C120,80 250,120 240,140 C230,160 100,180 100,210 C100,240 220,270 270,290"
+              stroke="rgba(255, 255, 255, 0.7)"
+              strokeWidth="8"
+              fill="none"
+              strokeLinecap="round"
+              strokeDasharray="1, 12"
+              pathLength="100"
+              strokeDashoffset="50"
             />
-            <line
-              x1="60%"
-              y1="40%"
-              x2="40%"
-              y2="60%"
-              stroke="#0ea5e9"
-              strokeWidth="2"
-              strokeDasharray="5,3"
-              opacity="0.6"
-            />
-            <line
-              x1="40%"
-              y1="60%"
-              x2="70%"
-              y2="80%"
-              stroke="#8b5cf6"
-              strokeWidth="2"
-              strokeDasharray="5,3"
-              opacity="0.6"
+            <path
+              d="M70,60 C120,80 250,120 240,140 C230,160 100,180 100,210 C100,240 220,270 270,290"
+              stroke="rgba(255, 255, 255, 0.3)"
+              strokeWidth="16"
+              fill="none"
+              strokeLinecap="round"
+              filter="blur(8px)"
             />
           </svg>
         </div>
       </div>
 
-      {/* Action items with interactive design - reduced height and spacing */}
+      {/* Action items with enhanced visual impact */}
       <div
         style={{
           position: "absolute",
@@ -253,45 +286,45 @@ const SlideEight = () => {
       >
         <h3
           style={{
-            fontSize: "22px",
+            fontSize: "24px",
             fontWeight: "700",
-            color: "#f8fafc",
-            margin: "0 0 20px 0",
-            textShadow: "0 2px 4px rgba(0,0,0,0.2)",
+            color: "#ffffff",
+            margin: "0 0 25px 0",
+            textShadow: "0 2px 8px rgba(0,0,0,0.5)",
           }}
         >
-          Immediate actions you can take:
+          Acciones inmediatas que puedes tomar:
         </h3>
 
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "15px",
+            gap: "18px",
           }}
         >
           {[
             {
               icon: "👥",
-              text: "Join developer communities (Codetitlan, local meetups)",
+              text: "Únete a comunidades de desarrolladores (Codetitlan, reuniones locales)",
               color: "#10b981",
               delay: 0,
             },
             {
               icon: "🎓",
-              text: "Participate in AI-focused education",
+              text: "Participa en educación enfocada en IA",
               color: "#0ea5e9",
               delay: 0.1,
             },
             {
               icon: "🌱",
-              text: "Engage with local AI projects (agriculture, health)",
+              text: "Involúcrate en proyectos locales de IA (agricultura, salud)",
               color: "#8b5cf6",
               delay: 0.2,
             },
             {
               icon: "🔊",
-              text: "Advocate for responsible policies",
+              text: "Aboga por políticas responsables",
               color: "#f43f5e",
               delay: 0.3,
             },
@@ -300,13 +333,13 @@ const SlideEight = () => {
               key={index}
               style={{
                 position: "relative",
-                padding: "14px 18px 14px 70px",
-                background: "rgba(15, 23, 42, 0.6)",
+                padding: "16px 20px 16px 75px",
+                background: "rgba(15, 23, 42, 0.8)",
                 backdropFilter: "blur(10px)",
                 WebkitBackdropFilter: "blur(10px)",
                 borderRadius: "12px",
-                border: `1px solid ${action.color}33`,
-                boxShadow: `0 10px 25px rgba(0, 0, 0, 0.15), 0 0 15px ${action.color}22`,
+                border: `1px solid ${action.color}55`,
+                boxShadow: `0 10px 25px rgba(0, 0, 0, 0.2), 0 0 20px ${action.color}33`,
                 transform: "perspective(1000px) rotateY(-5deg)",
                 animation: `slideIn 0.5s ease-out ${action.delay}s both`,
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -319,16 +352,16 @@ const SlideEight = () => {
                   left: "15px",
                   top: "50%",
                   transform: "translateY(-50%)",
-                  width: "40px",
-                  height: "40px",
+                  width: "45px",
+                  height: "45px",
                   borderRadius: "10px",
-                  background: `linear-gradient(135deg, ${action.color}33 0%, ${action.color}11 100%)`,
-                  border: `1px solid ${action.color}44`,
+                  background: action.color,
+                  border: `2px solid ${action.color}dd`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "22px",
-                  boxShadow: `0 5px 15px ${action.color}22`,
+                  fontSize: "24px",
+                  boxShadow: `0 5px 15px ${action.color}66`,
                 }}
               >
                 {action.icon}
@@ -337,34 +370,35 @@ const SlideEight = () => {
                 style={{
                   fontSize: "16px",
                   fontWeight: "600",
-                  color: "#f8fafc",
+                  color: "#ffffff",
                   lineHeight: 1.4,
+                  textShadow: "0 1px 2px rgba(0,0,0,0.3)",
                 }}
               >
                 {action.text}
               </div>
 
-              {/* Action button hint */}
+              {/* Action button with better visibility */}
               <div
                 style={{
                   position: "absolute",
                   right: "15px",
                   top: "50%",
                   transform: "translateY(-50%)",
-                  width: "24px",
-                  height: "24px",
+                  width: "28px",
+                  height: "28px",
                   borderRadius: "50%",
                   background: action.color,
-                  opacity: 0.2,
+                  opacity: 0.9,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  boxShadow: `0 0 10px ${action.color}44`,
+                  boxShadow: `0 0 10px ${action.color}88`,
                 }}
               >
                 <span
                   style={{
-                    fontSize: "12px",
+                    fontSize: "14px",
                     color: "#fff",
                     fontWeight: "bold",
                   }}
@@ -377,44 +411,47 @@ const SlideEight = () => {
         </div>
       </div>
 
-      {/* Final quote - moved up to prevent overlap */}
+      {/* Final quote with enhanced visibility */}
       <div
         style={{
           position: "absolute",
           bottom: "40px",
           left: "50px",
           right: "50px",
-          background: "rgba(15, 23, 42, 0.85)",
+          background: "rgba(15, 23, 42, 0.9)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
           borderRadius: "16px",
-          padding: "20px 25px",
-          border: "1px solid rgba(255, 255, 255, 0.1)",
-          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)",
+          padding: "22px 28px",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
+          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
           zIndex: 10,
         }}
       >
         <p
           style={{
-            fontSize: "17px",
+            fontSize: "18px",
             lineHeight: 1.6,
-            color: "#f1f5f9",
+            color: "#ffffff",
             margin: 0,
             fontStyle: "italic",
             textAlign: "center",
-            textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)",
+            textShadow: "0 1px 4px rgba(0, 0, 0, 0.4)",
           }}
         >
-          "If you're in Bajío and passionate about AI, opportunities exist
-          <span style={{ color: "#34d399", fontWeight: "600" }}>
+          "Si estás en el Bajío y te apasiona la IA, existen oportunidades
+          <span style={{ color: "#4ade80", fontWeight: "700" }}>
             {" "}
-            right now{" "}
+            ahora mismo{" "}
           </span>
-          to get involved, build your
-          <span style={{ color: "#38bdf8", fontWeight: "600" }}> skills</span>,
-          and influence how technology
-          <span style={{ color: "#fb7185", fontWeight: "600" }}> impacts </span>
-          our community."
+          para involucrarte, desarrollar tus
+          <span style={{ color: "#60cdff", fontWeight: "700" }}>
+            {" "}
+            habilidades
+          </span>
+          , e influir cómo la tecnología
+          <span style={{ color: "#ff93a3", fontWeight: "700" }}> impacta </span>
+          a nuestra comunidad."
         </p>
       </div>
 
@@ -423,10 +460,10 @@ const SlideEight = () => {
 
         @keyframes float {
           0% {
-            transform: translateY(0);
+            transform: translate(-50%, -50%);
           }
           100% {
-            transform: translateY(-10px);
+            transform: translate(-50%, -60%);
           }
         }
 

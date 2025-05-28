@@ -4,8 +4,8 @@ const SlideFive = () => {
   return (
     <div
       style={{
-        width: "1000px",
-        height: "800px",
+        width: "1200px",
+        height: "900px",
         position: "relative",
         background: "transparent",
         overflow: "visible",
@@ -18,8 +18,8 @@ const SlideFive = () => {
           position: "absolute",
           top: "-100px",
           left: "-100px",
-          width: "1200px",
-          height: "1000px",
+          width: "1400px",
+          height: "1100px",
           background:
             "radial-gradient(circle at 30% 50%, rgba(20, 20, 30, 0.8) 0%, rgba(15, 15, 22, 0.9) 40%, rgba(10, 10, 15, 0.95) 100%)",
           borderRadius: "20px",
@@ -50,7 +50,7 @@ const SlideFive = () => {
             transform: "skew(-5deg)",
           }}
         >
-          THE DARK SIDE
+          EL LADO OSCURO
         </h1>
         <div
           style={{
@@ -68,7 +68,7 @@ const SlideFive = () => {
               textShadow: "0 0 8px rgba(15, 23, 42, 0.8)",
             }}
           >
-            of AI Infrastructure
+            de la Infraestructura de IA
           </h2>
         </div>
       </div>
@@ -98,7 +98,7 @@ const SlideFive = () => {
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
           }}
         >
-          Data Centers and Water Scarcity
+          Centros de Datos y Escasez de Agua
         </h3>
       </div>
 
@@ -106,8 +106,8 @@ const SlideFive = () => {
       <div
         style={{
           position: "absolute",
-          top: "200px",
-          right: "80px",
+          top: "180px",
+          right: "100px",
           zIndex: 6,
           transform: "rotate(3deg)",
           background: "rgba(15, 23, 42, 0.6)",
@@ -126,7 +126,7 @@ const SlideFive = () => {
             margin: "0 0 5px 0",
           }}
         >
-          Querétaro's water deficit due to data centers:
+          Déficit de agua en Querétaro debido a centros de datos:
         </p>
         <div
           style={{
@@ -142,7 +142,7 @@ const SlideFive = () => {
             textAlign: "center",
           }}
         >
-          56.8 billion liters
+          56.8 mil millones de litros
         </div>
       </div>
 
@@ -152,8 +152,8 @@ const SlideFive = () => {
           display: "flex",
           position: "absolute",
           left: "50px",
-          top: "280px",
-          gap: "40px",
+          top: "330px",
+          gap: "60px",
           zIndex: 4,
         }}
       >
@@ -178,36 +178,26 @@ const SlideFive = () => {
         >
           <div
             style={{
-              fontSize: "16px",
-              fontWeight: "500",
-              color: "#94a3b8",
-              marginBottom: "10px",
-              textAlign: "center",
-            }}
-          >
-            Modern data center with servers and cooling systems
-          </div>
-          <div
-            style={{
               width: "220px",
-              height: "120px",
+              height: "180px",
               background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
               borderRadius: "8px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.5)",
+              overflow: "hidden",
             }}
           >
-            <div
+            <img
+              src="/Slide5_datacenter.png"
+              alt="Data center with servers"
               style={{
-                fontSize: "60px",
-                color: "#0ea5e9",
-                opacity: 0.7,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
               }}
-            >
-              🖥️
-            </div>
+            />
           </div>
         </div>
 
@@ -232,78 +222,36 @@ const SlideFive = () => {
         >
           <div
             style={{
-              fontSize: "16px",
-              fontWeight: "500",
-              color: "#94a3b8",
-              marginBottom: "10px",
-              textAlign: "center",
-            }}
-          >
-            Dry, cracked landscape showing water scarcity
-          </div>
-          <div
-            style={{
               width: "220px",
-              height: "120px",
+              height: "180px",
               background: "linear-gradient(135deg, #7f1d1d 0%, #92400e 100%)",
               borderRadius: "8px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.5)",
+              overflow: "hidden",
             }}
           >
-            <div
+            <img
+              src="/Slide5_dry_landscape.png"
+              alt="Dry landscape showing water scarcity"
               style={{
-                fontSize: "60px",
-                color: "#b45309",
-                opacity: 0.7,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
               }}
-            >
-              🏜️
-            </div>
+            />
           </div>
         </div>
-      </div>
-
-      {/* "Local communities" callout */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "170px",
-          left: "150px",
-          background: "rgba(20, 184, 166, 0.1)",
-          backdropFilter: "blur(8px)",
-          WebkitBackdropFilter: "blur(8px)",
-          borderRadius: "6px",
-          padding: "12px 18px",
-          boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
-          border: "1px solid rgba(20, 184, 166, 0.3)",
-          maxWidth: "450px",
-          transform: "rotate(-1deg)",
-          zIndex: 7,
-        }}
-      >
-        <p
-          style={{
-            margin: 0,
-            fontStyle: "italic",
-            color: "#14b8a6",
-            fontSize: "18px",
-            fontWeight: "500",
-            textShadow: "0 1px 3px rgba(0, 0, 0, 0.3)",
-          }}
-        >
-          "Local communities actively resisting due to environmental impact"
-        </p>
       </div>
 
       {/* Final quote in dramatic style */}
       <div
         style={{
           position: "absolute",
-          bottom: "50px",
-          right: "70px",
+          bottom: "100px",
+          right: "100px",
           maxWidth: "550px",
           background: "rgba(15, 23, 42, 0.7)",
           backdropFilter: "blur(15px)",
@@ -325,22 +273,22 @@ const SlideFive = () => {
             letterSpacing: "0.3px",
           }}
         >
-          "With every AI advancement comes infrastructure that demands
+          "Con cada avance en IA viene una infraestructura que demanda
           <span style={{ color: "#0ea5e9", fontWeight: "500" }}>
             {" "}
-            enormous resources
+            enormes recursos
           </span>
-          . Querétaro is at a crossroads—balancing
+          . Querétaro está en una encrucijada—equilibrando el
           <span style={{ color: "#f97316", fontWeight: "500" }}>
             {" "}
-            technology-driven growth
+            crecimiento impulsado por la tecnología
           </span>{" "}
-          with
+          con
           <span style={{ color: "#14b8a6", fontWeight: "500" }}>
             {" "}
-            essential human needs
+            necesidades humanas esenciales
           </span>{" "}
-          like water."
+          como el agua."
         </p>
       </div>
 

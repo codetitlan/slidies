@@ -11,6 +11,7 @@ import SlideFive from "./slides/slide-five";
 import SlideSix from "./slides/slide-six";
 import SlideSeven from "./slides/slide-seven";
 import SlideEight from "./slides/slide-eight";
+import SlideNine from "./slides/slide-nine";
 
 // We'll import the actual components only on the client side
 import dynamic from "next/dynamic";
@@ -111,15 +112,26 @@ const getSlideData = (slideId: string) => {
         rotateY: 75,
         rotateZ: -25,
       };
+    case "slide-nine":
+      // Personal slide - coming back to a more intimate view
+      return {
+        x: -1800,
+        y: 300,
+        z: 1500,
+        scale: 1.2,
+        rotateX: -5,
+        rotateY: -20,
+        rotateZ: 0,
+      };
     case "overview":
       // Extremely far back overview with panoramic view
       return {
-        x: 500,
-        y: -500,
-        z: 8000,
-        scale: 6,
-        rotateX: 25,
-        rotateY: -15,
+        x: 300,
+        y: -1000,
+        z: 6000,
+        scale: 5,
+        rotateX: 15,
+        rotateY: -45,
         rotateZ: 0,
       };
   }
@@ -194,6 +206,12 @@ const ImpressRoot = () => {
       id: "slide-eight",
       component: <SlideEight />,
       data: getSlideData("slide-eight"),
+      duration: 1500,
+    },
+    {
+      id: "slide-nine",
+      component: <SlideNine />,
+      data: getSlideData("slide-nine"),
       duration: 1500,
     },
     {

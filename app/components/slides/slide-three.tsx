@@ -36,7 +36,7 @@ const SlideThree = () => {
             textShadow: "2px 2px 0px rgba(0,0,0,0.1)",
           }}
         >
-          Beyond Intelligence
+          Más Allá de la Inteligencia
         </h1>
         <h2
           style={{
@@ -47,7 +47,7 @@ const SlideThree = () => {
             transform: "rotate(2deg)",
           }}
         >
-          The Human Advantage
+          La Ventaja Humana
         </h2>
       </div>
 
@@ -88,7 +88,7 @@ const SlideThree = () => {
             margin: 0,
           }}
         >
-          Uniquely human aspects AI struggles to replicate:
+          Aspectos únicamente humanos que la IA lucha por replicar:
         </h3>
       </div>
 
@@ -106,31 +106,31 @@ const SlideThree = () => {
       >
         {[
           {
-            text: "Deep empathy",
+            text: "Empatía profunda",
             color: "#f472b6",
             rotation: "3deg",
             delay: 0,
           },
           {
-            text: "Cultural alignment",
+            text: "Alineación cultural",
             color: "#818cf8",
             rotation: "-2deg",
             delay: 0.1,
           },
           {
-            text: "Historical consciousness",
+            text: "Conciencia histórica",
             color: "#60a5fa",
             rotation: "1deg",
             delay: 0.2,
           },
           {
-            text: "Ethical judgment",
+            text: "Juicio ético",
             color: "#4ade80",
             rotation: "-1deg",
             delay: 0.3,
           },
           {
-            text: "Creative and emotional intelligence",
+            text: "Inteligencia creativa y emocional",
             color: "#fb923c",
             rotation: "2deg",
             delay: 0.4,
@@ -194,8 +194,9 @@ const SlideThree = () => {
             fontWeight: "500",
           }}
         >
-          "Humans remain indispensable not because AI can't think, but because
-          true understanding involves more than just data processing—it involves
+          "Los humanos seguimos siendo indispensables no porque la IA no pueda
+          pensar, sino porque la verdadera comprensión implica más que solo
+          procesar datos—implica
           <span
             style={{
               color: "#f472b6",
@@ -204,7 +205,7 @@ const SlideThree = () => {
             }}
           >
             {" "}
-            empathy
+            empatía
           </span>
           ,
           <span
@@ -215,9 +216,9 @@ const SlideThree = () => {
             }}
           >
             {" "}
-            ethics
+            ética
           </span>
-          , and
+          , y
           <span
             style={{
               color: "#60a5fa",
@@ -226,7 +227,7 @@ const SlideThree = () => {
             }}
           >
             {" "}
-            cultural depth
+            profundidad cultural
           </span>
           ."
         </p>

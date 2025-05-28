@@ -4,8 +4,8 @@ const SlideFour = () => {
   return (
     <div
       style={{
-        width: "900px",
-        height: "700px",
+        width: "1100px",
+        height: "850px",
         position: "relative",
         background: "transparent",
         overflow: "visible",
@@ -19,12 +19,13 @@ const SlideFour = () => {
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: "800px",
-          height: "600px",
+          width: "1000px",
+          height: "750px",
           opacity: 0.06,
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='800' height='600' viewBox='0 0 800 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M150,50 Q250,150 350,100 T550,150 Q650,50 750,150 T650,300 Q550,400 650,500 T450,550 Q350,500 250,550 T50,450 Q150,350 50,250 T150,50 Z' fill='none' stroke='%2310b981' stroke-width='2'/%3E%3Cpath d='M250,100 Q350,200 450,150 T650,200 Q750,100 700,300 T550,400 Q450,500 350,450 T150,500 Q50,400 100,300 T250,100 Z' fill='none' stroke='%233b82f6' stroke-width='2'/%3E%3C/svg%3E")`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
+          backgroundSize: "contain",
           zIndex: 1,
         }}
       ></div>
@@ -78,7 +79,7 @@ const SlideFour = () => {
             lineHeight: 1.2,
           }}
         >
-          AI in My Region
+          IA en Mi Región
           <div
             style={{
               display: "inline-block",
@@ -130,7 +131,7 @@ const SlideFour = () => {
             textShadow: "0 2px 4px rgba(0,0,0,0.2)",
           }}
         >
-          Practical local examples:
+          Ejemplos prácticos locales:
         </h3>
 
         <div
@@ -142,22 +143,28 @@ const SlideFour = () => {
         >
           {[
             {
-              text: "Air pollution predictive models",
+              text: "Modelos predictivos de contaminación del aire",
               icon: "🌫️",
               color: "#0ea5e9",
               rotation: "-2deg",
             },
             {
-              text: "Smart agriculture applications",
+              text: "Aplicaciones de agricultura inteligente",
               icon: "🌱",
               color: "#10b981",
               rotation: "1deg",
             },
             {
-              text: "Health and education case studies",
+              text: "Casos de estudio en salud y educación",
               icon: "🏥",
               color: "#8b5cf6",
               rotation: "-1deg",
+            },
+            {
+              text: "La región del Bajío es donde se ubica la mayor concentración de data centers de todo el país",
+              icon: "🖥️",
+              color: "#f43f5e",
+              rotation: "2deg",
             },
           ].map((item, index) => (
             <div
@@ -214,10 +221,10 @@ const SlideFour = () => {
       <div
         style={{
           position: "absolute",
-          top: "170px",
+          top: "140px",
           right: "40px",
-          width: "380px",
-          height: "300px",
+          width: "320px",
+          height: "420px",
           background: "rgba(15, 23, 42, 0.65)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
@@ -247,7 +254,7 @@ const SlideFour = () => {
               color: "#e2e8f0",
             }}
           >
-            Querétaro's AI Applications
+            Aplicaciones de IA en Querétaro
           </span>
           <div
             style={{
@@ -274,35 +281,20 @@ const SlideFour = () => {
             justifyContent: "center",
             alignItems: "center",
             height: "calc(100% - 51px)",
-            padding: "20px",
+            padding: "5px",
+            overflow: "hidden",
           }}
         >
-          <div
+          <img
+            src="/Slide4_infograph.png"
+            alt="Aplicaciones de IA en Querétaro"
             style={{
-              fontSize: "24px",
-              color: "#94a3b8",
-              textAlign: "center",
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              borderRadius: "8px",
             }}
-          >
-            <div
-              style={{
-                fontSize: "36px",
-                marginBottom: "10px",
-              }}
-            >
-              📊
-            </div>
-            Infographic placeholder
-            <div
-              style={{
-                fontSize: "14px",
-                color: "#64748b",
-                marginTop: "10px",
-              }}
-            >
-              Will be replaced with your custom image
-            </div>
-          </div>
+          />
         </div>
       </div>
 
@@ -310,7 +302,7 @@ const SlideFour = () => {
       <div
         style={{
           position: "absolute",
-          bottom: "40px",
+          bottom: "60px",
           left: "50%",
           transform: "translateX(-50%)",
           width: "750px",
@@ -334,16 +326,17 @@ const SlideFour = () => {
             textAlign: "center",
           }}
         >
-          "AI is not just theoretical. In
+          "La IA no es solo teórica. En
           <span style={{ color: "#0ea5e9", fontWeight: "500" }}>
             {" "}
             Querétaro
           </span>
-          , it's already predicting air quality, helping farmers optimize crops,
-          and potentially improving health services. But this is
+          , ya está prediciendo la calidad del aire, ayudando a los agricultores
+          a optimizar cultivos, y potencialmente mejorando los servicios de
+          salud. Pero esto es
           <span style={{ color: "#10b981", fontWeight: "500" }}>
             {" "}
-            just the beginning
+            solo el comienzo
           </span>
           ."
         </p>

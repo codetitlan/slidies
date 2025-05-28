@@ -66,15 +66,15 @@ Slide 6: Navigating Labor Market Disruption
 
 ⸻
 
-Slide 7: Codetitlan’s Vision – AI as Opportunity for Latin America
+Slide 7: Codetitlan’s Vision – AI as Opportunity for Ibero-America
 • Suggested Content:
 • Key values: Fairness, equity, inclusivity, democratic control
 • Strategic goals:
 • Foster local innovation
-• Empower Latin American developers through AI and emerging tech
+• Empower Ibero-American developers through AI and emerging tech
 • Ethical tech practices addressing regional inequities
 • Monologue starter:
-“At Codetitlan, we believe AI can—and must—serve everyone. Our approach is rooted in fairness and equity, ensuring Latin America doesn’t just participate but actively shapes the AI revolution.”
+“At Codetitlan, we believe AI can—and must—serve everyone. Our approach is rooted in fairness and equity, ensuring Ibero-America doesn’t just participate but actively shapes the AI revolution.”
 
 ⸻
 
@@ -87,3 +87,25 @@ Slide 8: Practical Steps – Getting Involved in AI in the Bajío Region Today
 • Advocating for responsible environmental and labor policies
 • Monologue starter:
 “If you’re in Bajío and passionate about AI, opportunities exist right now to get involved, build your skills, and influence how technology impacts our community.”
+
+---
+
+Slide 9: About Me – Bridging Tech, Community, and Innovation
+
+Suggested Content:
+• Name & Brief Bio:
+• Highlight your role as a CTO, founder of Codetitlan, researcher, and community leader deeply involved in technological empowerment across Ibero-America.
+• Mention your base in Mexico and your active international collaborations.
+• Key Areas of Interest & Expertise:
+• AI & Automation
+• Geopolitics & Socioeconomic Impacts of Technology
+• Ethical Software Development and Community Building
+• Advocating for Fairness and Equity in Tech
+• Personal Touch (Optional):
+• Briefly mention your passion for creative expression (dancing, acrobatics), illustrating your multidimensional approach to innovation and community leadership.
+• Visual Suggestions:
+• Professional yet personable portrait or illustrative avatar.
+• Logos or symbols representing Codetitlan, AI, community, and innovation.
+
+Monologue starter:
+“I’m passionate about the intersection of technology and society—not just how innovation can change the world, but how we can guide it responsibly. My goal with Codetitlan and beyond is to ensure we harness technology ethically, inclusively, and sustainably, especially here in Ibero-America.”

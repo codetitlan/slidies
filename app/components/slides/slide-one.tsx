@@ -57,7 +57,7 @@ const SlideOne = () => {
               textShadow: "0 0 15px rgba(59, 130, 246, 0.3)",
             }}
           >
-            AI:
+            IA:
           </span>
           <span
             style={{
@@ -69,7 +69,7 @@ const SlideOne = () => {
               transform: "translateX(5px)",
             }}
           >
-            Revolution
+            Revolución
           </span>
           <span
             style={{
@@ -77,10 +77,11 @@ const SlideOne = () => {
               color: "#f43f5e",
               transform: "translateX(-5px)",
               opacity: 0.8,
+              marginLeft: "30px",
             }}
           >
             {" "}
-            or{" "}
+            o{" "}
           </span>
           <span
             style={{
@@ -92,7 +93,7 @@ const SlideOne = () => {
               transform: "translateX(10px)",
             }}
           >
-            Evolution?
+            ¿Evolución?
           </span>
         </h1>
       </div>
@@ -126,7 +127,7 @@ const SlideOne = () => {
             textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
           }}
         >
-          "AI is not a single technology; it's a
+          "La IA no es una sola tecnología; es una
           <span
             style={{
               color: "#a78bfa",
@@ -135,9 +136,9 @@ const SlideOne = () => {
             }}
           >
             {" "}
-            constellation{" "}
+            constelación{" "}
           </span>
-          of efforts aimed at emulating what we thought made us
+          de esfuerzos dirigidos a emular lo que pensábamos que nos hacía
           <span
             style={{
               color: "#93c5fd",
@@ -146,7 +147,7 @@ const SlideOne = () => {
             }}
           >
             {" "}
-            uniquely human
+            únicamente humanos
           </span>
           ."
         </p>
@@ -167,7 +168,7 @@ const SlideOne = () => {
       >
         {[
           {
-            text: "Reasoning",
+            text: "Razonamiento",
             color: "#10b981",
             fontFamily: "'Montserrat', sans-serif",
             fontSize: "16px",
@@ -180,7 +181,7 @@ const SlideOne = () => {
             bgColor: "rgba(16, 185, 129, 0.15)",
           },
           {
-            text: "Classification",
+            text: "Clasificación",
             color: "#3b82f6",
             fontFamily: "'Fira Sans', sans-serif",
             fontSize: "15px",
@@ -193,7 +194,7 @@ const SlideOne = () => {
             bgColor: "rgba(59, 130, 246, 0.15)",
           },
           {
-            text: "Emulation",
+            text: "Emulación",
             color: "#8b5cf6",
             fontFamily: "'Montserrat', sans-serif",
             fontSize: "16px",
@@ -206,7 +207,7 @@ const SlideOne = () => {
             bgColor: "rgba(139, 92, 246, 0.15)",
           },
           {
-            text: "Human-level intelligence",
+            text: "Inteligencia a nivel humano",
             color: "#f43f5e",
             fontFamily: "'Fira Sans', sans-serif",
             fontSize: "15px",
@@ -297,19 +298,19 @@ const SlideOne = () => {
             textShadow: "0 1px 2px rgba(0, 0, 0, 0.3)",
           }}
         >
-          "When we speak about AI, we're talking about a massive technological
-          push to replicate aspects of human cognition and decision-making,
-          previously thought impossible for machines. It's both an
+          "Cuando hablamos de IA, nos referimos a un enorme impulso tecnológico
+          para replicar aspectos de la cognición humana y la toma de decisiones,
+          anteriormente considerados imposibles para las máquinas. Es tanto una
           <span style={{ color: "#4ade80", fontWeight: "500" }}>
             {" "}
-            evolution{" "}
+            evolución{" "}
           </span>
-          of tools and a
+          de herramientas como un
           <span style={{ color: "#f43f5e", fontWeight: "500" }}>
             {" "}
-            revolutionary shift{" "}
+            cambio revolucionario{" "}
           </span>
-          in how we define human work."
+          en cómo definimos el trabajo humano."
         </p>
       </div>
 

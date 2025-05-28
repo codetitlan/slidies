@@ -1,0 +1,242 @@
+.about-me-slide {
+  background: linear-gradient(135deg, #2a3b4c, #1a2b3c);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-me-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/pattern-overlay.svg');
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.about-me-slide .slide-content {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1200px;
+  padding: 3rem;
+  border-radius: 8px;
+  background-color: rgba(20, 30, 40, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.about-me-slide .slide-title {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  color: #50c8ff;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(80, 200, 255, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+.about-me-slide .slide-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #50c8ff, transparent);
+}
+
+.about-me-container {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 2fr;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(80, 200, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #314a5e, #1a2b3c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.avatar-placeholder::after {
+  content: "👤";
+  font-size: 5rem;
+  opacity: 0.5;
+}
+
+.profile-logos {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.codetitlan-logo::after {
+  content: "C";
+  color: #50c8ff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.ai-symbol::after {
+  content: "AI";
+  color: #ffaa50;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.community-symbol::after {
+  content: "⌘";
+  color: #ff50aa;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.bio-section {
+  position: relative;
+}
+
+.bio-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffaa50;
+  font-weight: 600;
+}
+
+.bio-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+.bio-section h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #ff50aa;
+  font-weight: 500;
+}
+
+.expertise-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expertise-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.expertise-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #50c8ff;
+}
+
+.personal-section {
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.creative-expressions h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #a050ff;
+  font-weight: 500;
+}
+
+.creative-expressions p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.quote-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-left: 4px solid #50c8ff;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0 8px 8px 0;
+}
+
+.quote-container blockquote {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me-slide .slide-title {
+    font-size: 2.2rem;
+  }
+  
+  .about-me-slide .slide-content {
+    padding: 2rem;
+  }
+  
+  .profile-avatar {
+    width: 180px;
+    height: 180px;
+  }
+} 
