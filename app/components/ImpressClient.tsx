@@ -3,23 +3,11 @@ import React from "react";
 import { Impress, Step } from "react-impressjs";
 import "react-impressjs/styles/react-impressjs.css";
 
-interface SlideProps {
-  id: string;
-  component: React.ReactNode | null;
-  data: any;
-  duration?: number;
-}
+import type { ImpressRootConfig, ImpressSlide } from "./impress-types";
 
 interface ImpressClientProps {
-  slides: SlideProps[];
-  rootData?: {
-    width: number;
-    height: number;
-    maxScale: number;
-    minScale: number;
-    perspective: number;
-    transitionDuration: number;
-  };
+  slides: ImpressSlide[];
+  rootData?: ImpressRootConfig;
 }
 
 const ImpressClient: React.FC<ImpressClientProps> = ({ slides, rootData }) => {
@@ -29,7 +17,7 @@ const ImpressClient: React.FC<ImpressClientProps> = ({ slides, rootData }) => {
       progress={true}
       fallbackMessage={
         <p>
-          Sorry, your <b>device or browser</b> couldn't support well.
+          Sorry, your <b>device or browser</b> couldn&apos;t support well.
         </p>
       }
     >

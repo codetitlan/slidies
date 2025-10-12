@@ -114,11 +114,11 @@ const Slide9: React.FC = () => {
           transition={{ delay: 1.2, duration: 0.7 }}
         >
           <blockquote>
-            "I'm passionate about the intersection of technology and society—not
-            just how innovation can change the world, but how we can guide it
-            responsibly. My goal with Codetitlan and beyond is to ensure we
-            harness technology ethically, inclusively, and sustainably,
-            especially here in Ibero-America."
+            &ldquo;I&apos;m passionate about the intersection of technology and
+            society&mdash;not just how innovation can change the world, but how
+            we can guide it responsibly. My goal with Codetitlan and beyond is
+            to ensure we harness technology ethically, inclusively, and
+            sustainably, especially here in Ibero-America.&rdquo;
           </blockquote>
         </motion.div>
       </motion.div>

@@ -1,6 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+import type {
+  ImpressRootConfig,
+  ImpressSlide,
+  ImpressStepData,
+} from "./impress-types";
 
 // Import slide components
 import SlideOne from "./slides/slide-one";
@@ -13,24 +20,16 @@ import SlideSeven from "./slides/slide-seven";
 import SlideEight from "./slides/slide-eight";
 import SlideNine from "./slides/slide-nine";
 
-// We'll import the actual components only on the client side
-import dynamic from "next/dynamic";
-
-// Define the type for our slide data
-interface SlideProps {
-  id: string;
-  component: React.ReactNode | null;
-  data: any;
-  duration?: number;
-}
-
 // Use a more specific type for the dynamically imported component
-const ClientOnlyImpress = dynamic<{ slides: SlideProps[]; rootData?: any }>(
+const ClientOnlyImpress = dynamic<{
+  slides: ImpressSlide[];
+  rootData?: ImpressRootConfig;
+}>(
   () => import("@/app/components/ImpressClient"),
   { ssr: false }
 );
 
-const getSlideData = (slideId: string) => {
+const getSlideData = (slideId: string): ImpressStepData => {
   switch (slideId) {
     case "slide-one":
       // Starting point - centered origin
@@ -135,6 +134,8 @@ const getSlideData = (slideId: string) => {
         rotateZ: 0,
       };
   }
+
+  return {};
 };
 
 const ImpressRoot = () => {
@@ -150,7 +151,7 @@ const ImpressRoot = () => {
   }
 
   // Configure the root data for proper scaling
-  const rootData = {
+  const rootData: ImpressRootConfig = {
     width: 1024, // Target width of the presentation
     height: 768, // Target height of the presentation
     maxScale: 1, // Maximum scale (1 means don't increase on larger screens)
@@ -159,7 +160,7 @@ const ImpressRoot = () => {
     transitionDuration: 1000, // Transition duration in ms
   };
 
-  const slides: SlideProps[] = [
+  const slides: ImpressSlide[] = [
     {
       id: "slide-one",
       component: <SlideOne />,
