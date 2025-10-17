@@ -9,14 +9,15 @@
   --body-color: #cbd5f5;
   --surface: rgba(15, 23, 42, 0.7);
   position: relative;
-  width: 1000px;
-  height: 700px;
-  padding: 56px;
+  box-sizing: border-box;
+  width: clamp(820px, 70vw, 1080px);
+  min-height: max(620px, min(780px, calc(100vh - 120px)));
+  padding: clamp(32px, 6vw, 56px);
   border-radius: 36px;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: clamp(24px, 4vw, 32px);
   color: var(--body-color);
   font-family: "Inter", "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
   background:
