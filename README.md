@@ -1,72 +1,173 @@
-# AI, Codetitlan, and Our Future - Interactive Presentation
+# Slidies - Dynamic 3D Presentations
 
-This is an interactive presentation built with Next.js, React, and impress.js (via react-impressjs) that explores the impact of AI on Latin America, with a focus on the Querétaro & Bajío region.
+An interactive presentation framework built with Next.js, React, and impress.js that supports **dynamic content loading from JSON files**.
 
-## Features
+## ✨ Features
 
-- 3D presentation with smooth transitions between slides
-- Responsive design
-- Animated content elements
-- Created with react-impressjs
+- 🎯 **Dynamic Content**: Edit presentations via JSON (no code required)
+- 🎨 **5 Built-in Themes**: Purple, Blue, Green, Red, Orange
+- 🌀 **3D Transitions**: Smooth impress.js animations
+- ⚡ **Hot Reload**: Instant preview in development mode
+- 📱 **Responsive Design**: Works on all screen sizes
+- 🔒 **Type-Safe**: TypeScript validation for content structure
+- 🚀 **Static Generation**: Optimal performance with Next.js
 
-## Getting Started
+## 🚀 Quick Start
 
-1. Install dependencies:
+1. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
 
-```bash
-npm install
+2. **Edit content** in `data/slides-content.json`:
+   ```json
+   {
+     "title": "Your Presentation",
+     "slides": [
+       {
+         "slideNumber": 1,
+         "title": "Welcome",
+         "description": "Your content here",
+         "metadata": { "theme": "purple" }
+       }
+     ]
+   }
+   ```
+
+3. **Run development server**:
+   ```bash
+   pnpm dev
+   ```
+
+4. **Open browser**: http://localhost:3000 🎉
+
+## 📝 Content Management
+
+### Editing Slides
+
+All presentation content lives in `data/slides-content.json`:
+
+```json
+{
+  "slideNumber": 1,
+  "title": "Your Title",
+  "subtitle": "Optional subtitle",
+  "description": "Main description text",
+  "bulletPoints": ["Point 1", "Point 2", "Point 3"],
+  "metadata": { "theme": "blue" }
+}
 ```
 
-2. Run the development server:
+### Available Themes
 
-```bash
-npm run dev
+| Theme | Use Case | Colors |
+|-------|----------|--------|
+| `purple` | Default, tech, creativity | Purple gradient |
+| `blue` | Trust, professional, corporate | Blue gradient |
+| `green` | Growth, nature, sustainability | Green gradient |
+| `red` | Energy, passion, urgency | Red gradient |
+| `orange` | Creativity, warmth, enthusiasm | Orange gradient |
+
+### Complete Documentation
+
+📖 See [docs/dynamic-content-guide.md](docs/dynamic-content-guide.md) for:
+- Content schema reference
+- Theme examples
+- Best practices
+- Troubleshooting
+- Advanced usage
+
+## 🎮 Navigation
+
+- **Arrow Keys / Spacebar**: Navigate slides
+- **Home**: First slide
+- **End**: Overview of all slides
+- **Swipe**: Touch navigation (mobile)
+
+## 🏗️ Project Structure
+
+```
+slidies/
+├── data/
+│   └── slides-content.json         # ✏️ Edit your content here
+├── app/
+│   ├── types/
+│   │   └── slide-content.ts        # TypeScript interfaces
+│   ├── components/
+│   │   ├── slides/
+│   │   │   └── generic-slide.tsx   # Slide component
+│   │   ├── ImpressRoot.tsx         # Main presentation logic
+│   │   └── ImpressClient.tsx       # impress.js wrapper
+│   └── page.tsx                    # Entry point
+├── docs/
+│   ├── dynamic-content-guide.md    # Complete documentation
+│   └── story-5-slides-simplification.md
+└── public/                         # Static assets
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the presentation.
+## 🛠️ Tech Stack
 
-## Image Replacement Instructions
+- **Framework**: Next.js 15 (React 19)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: impress.js (via react-impressjs)
+- **Package Manager**: pnpm
 
-The presentation currently uses placeholder images that need to be replaced with actual assets:
+## 📦 Build & Deploy
 
-1. **Querétaro's AI Applications Infographic** (`/public/placeholder-infographic.png`):
+```bash
+# Development
+pnpm dev
 
-   - Required on Slide 4: "AI in My Region – Querétaro & Bajío Realities"
-   - Should visualize AI applications in the region including air quality prediction, agriculture, and health services
+# Production build
+pnpm build
+pnpm start
 
-2. **Data Center Image** (`/public/placeholder-datacenter.png`):
+# Type checking
+pnpm lint
+```
 
-   - Required on Slide 5: "The Dark Side of AI Infrastructure"
-   - Should show a modern data center with servers and cooling systems
+## 🔧 Customization
 
-3. **Dry Landscape Image** (`/public/placeholder-dryland.png`):
+### Adding New Themes
 
-   - Required on Slide 5: "The Dark Side of AI Infrastructure"
-   - Should depict water scarcity in the Querétaro region (dry, cracked land)
+See [docs/dynamic-content-guide.md#adding-new-themes](docs/dynamic-content-guide.md#adding-new-themes)
 
-4. **Automation Risk Chart** (`/public/placeholder-chart.png`):
-   - Required on Slide 6: "Navigating Labor Market Disruption"
-   - Should be a pie or bar chart showing sectors at risk of automation in Mexico
+### Changing 3D Positioning
 
-## Navigation
+Edit `getSlideData()` in `app/components/ImpressRoot.tsx`:
 
-Use arrow keys, spacebar, or swipe gestures to navigate through the presentation. Press 'Home' to return to the first slide. Press 'End' to see an overview of all slides.
+```typescript
+case "slide-1":
+  return { x: 0, y: 0, z: 0, scale: 0.5, rotateX: 0, rotateY: 0, rotateZ: 0 };
+```
 
-## Credits
+**Important**: The project uses dual scaling:
+- **Impress.js scale**: `0.5` (controls 3D slide positioning)
+- **Content scale**: `0.5` via CSS transform (ensures content fits in 750px container)
 
-Content based on "AI, Codetitlan, and Our Future" presentation outline.
+Both scales work together to prevent content overflow while maintaining readability.
 
-## Learn More
+### Adjusting Content Scale
 
-To learn more about Next.js, take a look at the following resources:
+To change how content fits within slides, edit `generic-slide.tsx`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```tsx
+<div style={{ transform: 'scale(0.5)', transformOrigin: 'center' }}>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Increase value (e.g., `0.6`) for larger text
+- Decrease value (e.g., `0.4`) for more compact slides
+- Always test across all slides to ensure no content cropping
 
-## Deploy on Vercel
+### Multiple Presentations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create different JSON files in `data/` and change the import in `ImpressRoot.tsx`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+Open source - feel free to use and modify!
+
+## 🙏 Credits
+
+Built with [Next.js](https://nextjs.org), [React](https://react.dev), and [impress.js](https://impress.js.org)

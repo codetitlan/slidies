@@ -10,11 +10,12 @@
   --surface: rgba(15, 23, 42, 0.7);
   position: relative;
   box-sizing: border-box;
-  width: clamp(820px, 70vw, 1080px);
-  min-height: max(620px, min(780px, calc(100vh - 120px)));
-  padding: clamp(32px, 6vw, 56px);
-  border-radius: 36px;
-  overflow: visible;
+  width: clamp(1100px, 85vw, 1400px);
+  height: 750px;
+  max-height: 750px;
+  padding: clamp(28px, 4.5vw, 42px);
+  border-radius: 32px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: clamp(24px, 4vw, 32px);

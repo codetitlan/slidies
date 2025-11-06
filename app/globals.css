@@ -32,3 +32,35 @@ html {
   min-height: 100%;
   background: transparent;
 }
+
+/* Override react-impressjs default styles */
+.step {
+  /* Dimensions - 30% wider than default 900px */
+  width: 1170px !important;
+  max-width: none !important;
+
+  /* Remove default padding to maximize usable space */
+  padding: 0 !important;
+
+  /* Remove default margin - let impress.js handle positioning */
+  margin: 0 !important;
+
+  /* Reset font-size so Tailwind classes work properly */
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+/* CRITICAL: Remove react-impressjs heading size overrides completely */
+/* This allows Tailwind classes like text-4xl, text-xl, etc. to work */
+.step h1,
+.step h2,
+.step h3,
+.step h4,
+.step h5,
+.step h6,
+.step p,
+.step span,
+.step li {
+  font-size: revert !important;
+  line-height: revert !important;
+}

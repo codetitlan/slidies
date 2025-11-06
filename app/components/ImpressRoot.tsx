@@ -9,16 +9,12 @@ import type {
   ImpressStepData,
 } from "./impress-types";
 
-// Import slide components
-import SlideOne from "./slides/slide-one";
-import SlideTwo from "./slides/slide-two";
-import SlideThree from "./slides/slide-three";
-import SlideFour from "./slides/slide-four";
-import SlideFive from "./slides/slide-five";
-import SlideSix from "./slides/slide-six";
-import SlideSeven from "./slides/slide-seven";
-import SlideEight from "./slides/slide-eight";
-import SlideNine from "./slides/slide-nine";
+// Import generic slide component and types
+import GenericSlide from "./slides/generic-slide";
+import type { PresentationData } from "@/app/types/slide-content";
+
+// Import slide content data
+import slidesData from "@/data/slides-content.json";
 
 // Use a more specific type for the dynamically imported component
 const ClientOnlyImpress = dynamic<{
@@ -30,107 +26,66 @@ const ClientOnlyImpress = dynamic<{
 );
 
 const getSlideData = (slideId: string): ImpressStepData => {
+  // Impress.js scale: 0.5 controls 3D positioning (camera zoom level)
+  // This works together with CSS transform: scale(0.5) in generic-slide.tsx
+  // See docs/scaling-architecture.md for dual scaling explanation
   switch (slideId) {
-    case "slide-one":
+    case "slide-1":
       // Starting point - centered origin
-      return { x: 0, y: 0, z: 0, scale: 1, rotateX: 0, rotateY: 0, rotateZ: 0 };
-    case "slide-two":
+      return { x: 0, y: 0, z: 0, scale: 0.5, rotateX: 0, rotateY: 0, rotateZ: 0 };
+    case "slide-2":
       // Far to the right, tilted back
       return {
-        x: 2500,
+        x: 2000,
         y: -500,
         z: -800,
-        scale: 0.8,
+        scale: 0.5,
         rotateX: 20,
         rotateY: -15,
-        rotateZ: 5,
+        rotateZ: 0,
       };
-    case "slide-three":
+    case "slide-3":
       // High up and to the left, looking down
       return {
-        x: -2000,
-        y: -1500,
-        z: 1200,
-        scale: 1.2,
-        rotateX: 45,
-        rotateY: 10,
-        rotateZ: -10,
+        x: -1500,
+        y: 800,
+        z: 1000,
+        scale: 0.5,
+        rotateX: -10,
+        rotateY: 30,
+        rotateZ: 10,
       };
-    case "slide-four":
+    case "slide-4":
       // Deep in space, behind and right
       return {
-        x: 1800,
-        y: 600,
-        z: -3000,
-        scale: 1.4,
-        rotateX: -20,
-        rotateY: 60,
-        rotateZ: 0,
-      };
-    case "slide-five":
-      // "Dark side" slide - dramatic position beneath
-      return {
-        x: -500,
-        y: 2200,
-        z: -1500,
-        scale: 1.3,
-        rotateX: -60,
-        rotateY: -30,
-        rotateZ: 15,
-      };
-    case "slide-six":
-      // Far left and upside down
-      return {
-        x: -3000,
-        y: 800,
-        z: -600,
-        scale: 0.9,
-        rotateX: 5,
+        x: 1200,
+        y: 1500,
+        z: -1200,
+        scale: 0.5,
+        rotateX: 45,
         rotateY: -20,
-        rotateZ: 180,
-      };
-    case "slide-seven":
-      // Above and far ahead
-      return {
-        x: 1000,
-        y: -2500,
-        z: 2500,
-        scale: 1.1,
-        rotateX: 35,
-        rotateY: -45,
         rotateZ: -5,
       };
-    case "slide-eight":
-      // Extremely far right, tilted dramatically
+    case "slide-5":
+      // Far left and elevated
       return {
-        x: 4000,
-        y: 500,
-        z: 200,
-        scale: 1,
-        rotateX: 10,
-        rotateY: 75,
-        rotateZ: -25,
-      };
-    case "slide-nine":
-      // Personal slide - coming back to a more intimate view
-      return {
-        x: -1800,
-        y: 300,
-        z: 1500,
-        scale: 1.2,
-        rotateX: -5,
-        rotateY: -20,
-        rotateZ: 0,
+        x: -2200,
+        y: -800,
+        z: 500,
+        scale: 0.5,
+        rotateX: -15,
+        rotateY: 10,
+        rotateZ: 15,
       };
     case "overview":
-      // Extremely far back overview with panoramic view
+      // Far back overview with panoramic view
       return {
-        x: 300,
-        y: -1000,
-        z: 6000,
-        scale: 5,
-        rotateX: 15,
-        rotateY: -45,
+        x: 0,
+        y: 0,
+        z: 4000,
+        scale: 3,
+        rotateX: 0,
+        rotateY: 0,
         rotateZ: 0,
       };
   }
@@ -152,69 +107,32 @@ const ImpressRoot = () => {
 
   // Configure the root data for proper scaling
   const rootData: ImpressRootConfig = {
-    width: 1024, // Target width of the presentation
-    height: 768, // Target height of the presentation
-    maxScale: 1, // Maximum scale (1 means don't increase on larger screens)
+    width: 1170, // Target width of the presentation (900px + 30% = 1170px)
+    height: 750, // Target height of the presentation (taller to fit all content)
+    maxScale: 1, // Maximum scale (no zoom out, fit to viewport)
     minScale: 0.2, // Minimum scale allowed when fitting to screen
     perspective: 1000, // 3D perspective
     transitionDuration: 1000, // Transition duration in ms
   };
 
+  // Type-safe presentation data
+  const presentationData = slidesData as PresentationData;
+  const totalSlides = presentationData.slides.length;
+
+  // Generate slides from data
   const slides: ImpressSlide[] = [
-    {
-      id: "slide-one",
-      component: <SlideOne />,
-      data: getSlideData("slide-one"),
-      duration: undefined,
-    },
-    {
-      id: "slide-two",
-      component: <SlideTwo />,
-      data: getSlideData("slide-two"),
-      duration: 1500,
-    },
-    {
-      id: "slide-three",
-      component: <SlideThree />,
-      data: getSlideData("slide-three"),
-      duration: 1500,
-    },
-    {
-      id: "slide-four",
-      component: <SlideFour />,
-      data: getSlideData("slide-four"),
-      duration: 1500,
-    },
-    {
-      id: "slide-five",
-      component: <SlideFive />,
-      data: getSlideData("slide-five"),
-      duration: 1500,
-    },
-    {
-      id: "slide-six",
-      component: <SlideSix />,
-      data: getSlideData("slide-six"),
-      duration: 1500,
-    },
-    {
-      id: "slide-seven",
-      component: <SlideSeven />,
-      data: getSlideData("slide-seven"),
-      duration: 1500,
-    },
-    {
-      id: "slide-eight",
-      component: <SlideEight />,
-      data: getSlideData("slide-eight"),
-      duration: 1500,
-    },
-    {
-      id: "slide-nine",
-      component: <SlideNine />,
-      data: getSlideData("slide-nine"),
-      duration: 1500,
-    },
+    ...presentationData.slides.map((slideContent, index) => ({
+      id: `slide-${slideContent.slideNumber}`,
+      component: (
+        <GenericSlide
+          slideNumber={slideContent.slideNumber}
+          content={slideContent}
+          totalSlides={totalSlides}
+        />
+      ),
+      data: getSlideData(`slide-${slideContent.slideNumber}`),
+      duration: index === 0 ? undefined : 1500,
+    })),
     {
       id: "overview",
       component: null,

@@ -1,0 +1,76 @@
+{
+  "title": "Company Presentation Template",
+  "author": "Marketing Team",
+  "date": "2025",
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "Your Company Name",
+      "subtitle": "Tagline or Mission Statement Goes Here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace this with your opening message.",
+      "metadata": {
+        "theme": "purple"
+      }
+    },
+    {
+      "slideNumber": 2,
+      "title": "Our Vision & Mission",
+      "subtitle": "What Drives Us Forward",
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "bulletPoints": [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Ut enim ad minim veniam quis nostrud",
+        "Duis aute irure dolor in reprehenderit",
+        "Excepteur sint occaecat cupidatat non proident"
+      ],
+      "metadata": {
+        "theme": "blue"
+      }
+    },
+    {
+      "slideNumber": 3,
+      "title": "Key Products & Services",
+      "description": "Quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+      "bulletPoints": [
+        "Product/Service #1 - Consectetur adipiscing elit",
+        "Product/Service #2 - Sed do eiusmod tempor",
+        "Product/Service #3 - Ut labore et dolore magna",
+        "Product/Service #4 - Aliqua ut enim ad minim",
+        "Product/Service #5 - Veniam quis nostrud exercitation"
+      ],
+      "metadata": {
+        "theme": "green"
+      }
+    },
+    {
+      "slideNumber": 4,
+      "title": "Our Success Metrics",
+      "subtitle": "Results That Speak for Themselves",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+      "bulletPoints": [
+        "XX% increase in customer satisfaction",
+        "XX,XXX+ clients served worldwide",
+        "XX awards and recognitions",
+        "$XXM+ in annual revenue"
+      ],
+      "metadata": {
+        "theme": "red"
+      }
+    },
+    {
+      "slideNumber": 5,
+      "title": "Let's Work Together",
+      "subtitle": "Contact Information",
+      "description": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.",
+      "bulletPoints": [
+        "Email: hello@yourcompany.com",
+        "Phone: +1 (555) 123-4567",
+        "Website: www.yourcompany.com",
+        "Social: @yourcompany"
+      ],
+      "metadata": {
+        "theme": "orange"
+      }
+    }
+  ]
+}
